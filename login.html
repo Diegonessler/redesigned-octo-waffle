@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    
+    <img src="imagem/logo.jfif " width="170" height="170" >
+    <div class="container">
+        
+        <h2>Login</h2>
+        <form id="loginForm" action="#" method="POST" onsubmit="return validarLogin()">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <input type="submit" value="Login">
+        </form>
+        <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </div>
+    
+    <script>
+        function validarLogin() {
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+            if (email === '' || senha === '') {
+                alert('Por favor, preencha o email e a senha.');
+                return false;
+            }
+            // Aqui você pode adicionar o código para verificar o login com um servidor, 
+            // e em caso de sucesso, redirecionar para a página home.html
+            // Por enquanto, apenas redirecione para "home.html" diretamente
+            window.location.href = "home.html";
+            return true;
+        }
+    </script>
+</body>
+<footer>
+    <img src="imagem/Screenshot_2023-12-11-09-27-54-546_com.android.chrome_2-removebg-preview.png" >
+</footer>
+</html>
